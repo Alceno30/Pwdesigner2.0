@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Site de Tecnologia</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        li:nth-of-type(4) a {
+            background-color: cadetblue;
+            border-radius: 5px;
+            padding: 4px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://api.whatsapp.com/send?phone=13996156773" target="_blank" class="whatsapp-button">
+    </a>
+
+    <header>
+        <img src="img/LogoProg.png" class="logo ">
+        <nav>
+            <ul class="menu ">
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Serviços.html">Serviços</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+            <button>三</button>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="Serviços.html">Serviços</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Titulo">
+        <h1>Fale Conosco</h1>
+        <img src="img/LogoProg.png"></div>
+    </section>
+
+    <form action="php/enviar-email.php" method="post" enctype="multipart/form-data">
+
+        <div class="dados-pessoais">
+            <h2>Dados Pessoais</h2>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <div class="tipo-servico">
+                <h2>Tipo de Serviço</h2>
+                <label for="tipo_servico">Selecione o tipo de serviço:</label>
+                <select id="tipo_servico" name="tipo_servico" required>
+                      <option value="">Selecione...</option>
+                      <option value="suporte">Suporte Técnico</option>
+                      <option value="vendas">Vendas</option>
+                      <option value="duvidas">Dúvidas Gerais</option>
+                      <option value="outros">Outros</option>
+                    </select>
+            </div><br>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+            <div class="mensagem">
+                <h2>Mensagem</h2>
+                <label for="mensagem">Deixe sua mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+        </div>
+
+        <div class="envio-documentos">
+            <h2>Envio de Documentos</h2>
+            <label for="documentos">Selecione os documentos:</label>
+            <input type="file" id="documentos" name="documentos[]" multiple required>
+            <p>Você pode selecionar vários arquivos.</p>
+        </div>
+
+        <button type="submit">Enviar Formulário</button>
+    </form><br><br>
+    <footer>
+        <p>&copy; 2024 Alceno CEO - Prog Web Designer. Todos os direitos reservados.</p>
+    </footer>
+    <script src="scripts/Script.js"></script>
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        
+        form>* {
+            margin: 0 50px;
+        }
+        
+        section>section img {
+            min-width: 300px;
+            max-width: 300px;
+        }
+        
+        section>section h1 {
+            font-size: 36px;
+        }
+        
+        label,
+        h1,
+        h2,
+        p {
+            color: white
+        }
+    </style>
+</body>
+
+</html>

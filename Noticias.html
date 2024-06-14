@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Automático</title>
+    <style>
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+        /* Botões de navegação */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        /* Posição do botão esquerdo */
+        
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* Posição do botão direito */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* Controle de slides */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="https://api.whatsapp.com/send?phone=13996156773" target="_blank" class="whatsapp-button">
+        <img src="whatsapp-33.png" alt="WhatsApp">
+    </a>
+    <div class="slideshow-container">
+
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+            <img src="Ruan.jpeg" style="width:100%">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+            <img src="Renata.jpeg" style="width:100%">
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+            <img src="Logo Prog Web Desi.png" style="width:100%">
+        </div>
+
+        <!-- Botão Anterior -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+        <!-- Botão Próximo -->
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Altera a imagem a cada 2 segundos
+        }
+
+        // Função para avançar ou retroceder os slides
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    </script>
+
+</body>
+
+</html>

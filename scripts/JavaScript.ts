@@ -1,0 +1,29 @@
+const noticias = document.getElementById('noticias');
+
+fetch('noticias.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(noticia => {
+      const article = document.createElement('article');
+
+      const img = document.createElement('img');
+      img.src = noticia.imagem;
+      img.alt = noticia.titulo;
+      article.appendChild(img);
+
+      const h3 = document.createElement('h3');
+      h3.textContent = noticia.titulo;
+      article.appendChild(h3);
+
+      const p = document.createElement('p');
+      p.textContent = noticia.resumo;
+      article.appendChild(p);
+
+      const a = document.createElement('a');
+      a.href = noticia.url;
+      a.textContent = 'Leia mais';
+      article.appendChild(a);
+
+      noticias.appendChild(article);
+    });
+  });

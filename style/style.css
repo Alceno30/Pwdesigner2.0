@@ -1,0 +1,268 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+}
+
+/* Botão Whatsapp */
+body>a:first-child{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+
+
+    width: 75px;
+    height: 75px;
+
+
+    background-image: url('../img/whatsapp-33.png');
+    background-size: contain;
+    border-radius: 50%;
+    z-index: 30;
+}
+
+
+
+/* Header */
+header{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #80c0c2;
+}
+header img{
+    width: 120px;
+    height: 100px;
+}
+header :where(ul:nth-of-type(2),button){
+    display: none;
+}
+header ul:first-of-type li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+}
+header ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    margin-left: 10px;
+}
+header ul:nth-of-type(2){
+    position: absolute;
+    right: 0;
+    z-index: 30;
+    background-color: #55696e;
+    padding: 20px;
+    border-radius: 10px;
+}
+header ul:nth-of-type(2) li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+
+
+/* Slides */
+section#Slider{
+    height: 450px;
+    flex-basis: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+section#Slider>div{
+    width: 350px;
+    height: 350px;
+    padding-top: 20px;
+    position: absolute;
+    text-align: center;
+}
+section#Slider>div img{
+    width: 250px;
+    height: 200px;
+}
+section#Slider>div p{
+    padding: 0 60px;
+}
+
+
+
+/* Textos Curtos */
+section#TxtEmpr{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+section#TxtEmpr>section {
+    flex: 1;
+    min-width: 275px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+section#TxtEmpr>section h1 {
+    flex-basis: 100%;
+    text-align: center;
+}
+section#TxtEmpr>section img{
+    width: 100px;
+    height: 100px;
+}
+section#TxtEmpr>section p{
+    text-align: center;
+    margin: 0 20px;
+}
+section#TxtEmpr>section button {
+    background-color: #0000;
+    width: 238px;
+    height: 65px;
+    background-image: url('../img/Clique.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Serviços e CEO */
+section.Galeria{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+section.Galeria div{
+    position: relative;
+    height: 300px;
+    min-width: 300px;
+}
+section.Galeria img{
+    
+    width: 200px;
+    height: auto;
+
+    transition: transform 0.5s ease;
+}
+section.Galeria p{
+    /* estilo */
+    width: 100%;
+    text-align: center;
+    background-color: #0008;
+    color: white;
+    padding: 20px 0;
+    margin: 0 auto;
+
+    /* Posicionamento */
+    position: absolute;
+    bottom: 0;
+
+    /* Animação */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+section.Galeria>div:hover p{
+    opacity: 1;
+}
+section.Galeria>div:hover img{
+    transform: scale(1.1);
+}
+section.Galeria:has(+section){
+    background-color: cadetblue;
+    padding: 20px;
+}
+section.Galeria+section{
+    background-color: #55696e;
+    margin: 50px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+}
+
+
+/* Página de Contato */
+section#Titulo{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+form textarea{
+    width: 100%;
+}
+
+/* Copyright */
+footer{
+    display: flex;
+    flex-basis: 100%;
+    background-color: #80c0c2;
+    justify-content: center;
+}
+footer p:first-of-type{
+    color: black;
+}
+
+
+
+/******************************
+Responsividade
+******************************/
+@media screen and (min-width:1150px){
+    header :where(ul:nth-of-type(2),button){
+        display: none;
+    }
+    header ul:first-of-type{
+        display: block;
+    }
+}
+@media screen and (max-width:1150px){
+    header button{
+        display: block;
+    }
+    header ul:first-of-type{
+        display: none;
+    }
+    section#Slider{
+        height: 475px;
+    }
+    section#Slider>div{
+        width: 300px;
+        height: 300px;
+    }
+    footer{
+        padding: 30px;
+    }
+    footer p{
+        width: 100%;
+        text-align: center;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:500px){
+    section.Galeria+section{
+        height: 800px;
+    }
+    section.Galeria p{
+        opacity: 1;
+    }
+    body>a:first-child{
+        bottom: 50px;
+    }
+    section#Titulo img{
+        width: 350px;
+    }
+
+    form>div *{
+        display: block;
+        width: 100%;
+    }
+
+}
