@@ -248,7 +248,7 @@ Responsividade
 }
 @media screen and (max-width:500px){
     section#Slider{
-        height:500px
+        height:550px
     }
     section.Galeria+section{
         height: 800px;
