@@ -46,6 +46,9 @@ header ul:first-of-type li{
     list-style: none;
     margin: 0 10px;
 }
+form{
+    padding-bottom: 20px;
+}
 header ul li a{
     text-decoration: none;
     font-size: 22px;
