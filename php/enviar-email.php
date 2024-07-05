@@ -10,7 +10,7 @@ $tipoServico = $_POST['tipo_servico'];
 $documentos = $_FILES['documentos'];
 
 // Configurar o e-mail de destino
-$emailDestino = "alceno@pwdesigner.com.br";
+$emailDestino = "alcenoeadelia@hotmail.com";
 
 // Criar o corpo da mensagem
 $corpoMensagem = "**Nome:** $nome\n";
