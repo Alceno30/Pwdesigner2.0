@@ -146,9 +146,11 @@ section.Galeria div{
     position: relative;
     height: 300px;
     min-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 section.Galeria img{
-    
     width: 200px;
     height: auto;
 
