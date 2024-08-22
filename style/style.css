@@ -194,7 +194,6 @@ section.Galeria+section{
 
 /* Página de Contato */
 section#Titulo{
-    flex-basis: 100%;
     text-align: center;
     margin: 20px 0;
 }
