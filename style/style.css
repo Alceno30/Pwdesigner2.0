@@ -144,7 +144,7 @@ section.Galeria{
 }
 section.Galeria div{
     position: relative;
-    height: 300px;
+    /* height: auto; */
     min-width: 300px;
     display: flex;
     flex-wrap: wrap;
@@ -259,7 +259,7 @@ Responsividade
         height:550px
     }
     section.Galeria+section{
-        height: 800px;
+        height: 400px;
     }
     section#Slider>div.slide{
         width: 400px;
