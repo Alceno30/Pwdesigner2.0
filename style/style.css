@@ -251,11 +251,18 @@ Responsividade
     }
 }
 @media screen and (max-width:500px){
+    header button{
+        position: relative;
+        left:-20px
+    }
     section#Slider{
         height:550px
     }
     section.Galeria+section{
         height: 800px;
+    }
+    section#Slider>div.slide{
+        width: 400px;
     }
     section.Galeria p{
         opacity: 1;
@@ -266,10 +273,15 @@ Responsividade
     section#Titulo img{
         width: 350px;
     }
-
+    #Titulo>p {
+        margin: 0 20px;
+    }
     form>div *{
         display: block;
         width: 100%;
+    }
+    .Galeria~ul:last-of-type{
+        margin-right: 10px;
     }
 
 }
